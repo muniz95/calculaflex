@@ -27,12 +27,13 @@
       "sizes": "512x512",
       "type": "image/png"
     },
+    {
       "src": "favicon.ico",
       "sizes": "16x16",
       "type": "image/png"
     }
   ],
-  "start_url": "./index.html",
+  "start_url": "./",
   "display": "standalone",
   "theme_color": "#3c82c4",
   "background_color": "#3c82c4"

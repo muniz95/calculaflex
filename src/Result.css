@@ -1,0 +1,24 @@
+.Result {
+  text-align: center;
+  font-size: 3em;
+}
+
+.Result-alcohol {
+  color: green;
+}
+
+.Result-gasoline {
+  color: red;
+}
+
+.Result-none {
+  color: blue;
+}
+
+.Result-false {
+  color: gray;
+}
+
+.Result-true {
+  text-decoration: underline;
+}
