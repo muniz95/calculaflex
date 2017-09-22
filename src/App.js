@@ -3,21 +3,23 @@ import Result from './Result.js';
 import './App.css';
 
 class App extends Component {
-  state = { result: '', highlight: 'none', alcohol: 0, gasoline: 0 };
+  state = { result: '', highlight: 'none', alcohol: undefined, gasoline: undefined };
 
 	setAlcohol = e => {
-		this.setState({ alcohol: e.target.value });
+		const value = Number.parseFloat(e.target.value);
+		this.setState({ alcohol: (value < 0 ? 0 : value) });
 	}
 	
 	setGasoline = e => {
-		this.setState({ gasoline: e.target.value });
+		const value = Number.parseFloat(e.target.value);
+		this.setState({ gasoline: (value < 0 ? 0 : value) });
 	}
 	
 	calculate = () => {
-		let { alcohol, gasoline } = this.state;
-		let cx = alcohol / gasoline;
-		let result = cx < 0.7 ? 'A' : 'G';
-		let highlight = cx < 0.7 ? 'alcohol' : 'gasoline';
+		const { alcohol, gasoline } = this.state;
+		const cx = alcohol / gasoline;
+		const result = cx < 0.7 ? 'A' : 'G';
+		const highlight = cx < 0.7 ? 'alcohol' : 'gasoline';
 		this.setState({
 		  result: result,
 		  highlight: highlight
