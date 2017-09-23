@@ -4,3 +4,19 @@ body {
   padding: 0;
   font-family: "Open Sans", "lucida grande", "Segoe UI", arial, verdana, "lucida sans unicode", tahoma, sans-serif;
 }
+
+footer {
+  text-align: center;
+  color: white;
+  width: 100%;
+  bottom: 0;
+  padding-bottom: 10px;
+  position: fixed;
+}
+
+footer a:active {
+    color: orange;
+}
+footer a:visited {
+    color: silver;
+}
