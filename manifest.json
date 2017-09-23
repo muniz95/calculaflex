@@ -34,7 +34,7 @@
     }
   ],
   "start_url": "./",
-  "display": "fullscreen",
-  "theme_color": "#3c82c4",
-  "background_color": "#3c82c4"
+  "display": "standalone",
+  "theme_color": "#01454f",
+  "background_color": "#01454f"
 }
