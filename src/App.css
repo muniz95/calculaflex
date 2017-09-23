@@ -2,19 +2,30 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 80px;
-}
-
 .App-header {
-  background-color: #3c82c4;
-  height: 150px;
-  padding: 20px;
+  background-color: #01454f;
+  height: 35px;
+  margin: 50px;
   color: #3d464d;
 }
 
-.App-intro {
+.App-group {
+  color: white;
   font-size: large;
+}
+
+.App-input {
+  font-size: 20px;
+  height: 35px;
+  width: 80%;
+}
+
+button {
+  background-color: orange;
+  border-style: none;
+  width: 80%;
+  height: 50px;
+  font-size: 20px;
 }
 
 code {

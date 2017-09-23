@@ -1,24 +1,28 @@
 .Result {
   text-align: center;
   font-size: 3em;
+  display: flex;
 }
 
 .Result-alcohol {
-  color: green;
+  width: 100%;
+  background-color: green;
+  color: white;
 }
 
 .Result-gasoline {
-  color: red;
-}
-
-.Result-none {
-  color: blue;
+  background-color: red;
+  color: white;
 }
 
 .Result-false {
+  float: left;
+  width: 50%;
   color: gray;
+  background-color: black;
 }
 
 .Result-true {
-  text-decoration: underline;
+  float: right;
+  width: 50%;
 }

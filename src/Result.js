@@ -6,13 +6,12 @@ class Result extends Component {
   render({ result, highlight }) {
       return (
         <div className="Result">
-          <span className={`Result-alcohol Result-${highlight === "alcohol"}`}>
+          <div className={`Result-alcohol Result-${highlight === "alcohol"}`}>
             A
-          </span>
-          <span>&nbsp;|&nbsp;</span>
-          <span className={`Result-gasoline Result-${highlight === "gasoline"}`}>
+          </div>
+          <div className={`Result-gasoline Result-${highlight === "gasoline"}`}>
             G
-          </span>
+          </div>
         </div>
       );
     }
