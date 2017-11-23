@@ -1,10 +1,10 @@
 import Component from 'inferno-component';
-import Result from './Result.js';
+import Result from './components/Result';
 import './App.css';
 
 class App extends Component {
 
-  state = { result: '', highlight: 'none', alcohol: undefined, gasoline: undefined };
+  state = { highlight: 'none', alcohol: undefined, gasoline: undefined };
 
 	setAlcohol = e => 
 		this.setState({ alcohol: (e.target.value < 0 ? 0 : e.target.value) })
@@ -17,19 +17,15 @@ class App extends Component {
 	calculate = () => {
 		const { alcohol, gasoline } = this.state;
 		const cx = this.parseValue(alcohol) / this.parseValue(gasoline);
-		const result = cx < 0.7 ? 'A' : 'G';
-		const highlight = cx < 0.7 ? 'alcohol' : 'gasoline';
-		this.setState({
-		  result: result,
-		  highlight: highlight
-		})
+		const highlight = cx < 0.7 ? 'alcohol' : 'gasoline'
+		this.setState({highlight})
 	}
 	
 	render() {
 		return (
 		  <div className="App">
 		    <div className="App-header">
-		      <Result result={this.state.result} highlight={this.state.highlight} />
+		      <Result highlight={this.state.highlight} />
 		    </div>
 		    <p className="App-group">
 		      <label for="alcohol">Preço do álcool</label><br/>
